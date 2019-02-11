@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600');
+/*font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+/*font-family: 'Playfair Display', serif;*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+/*font-family: 'Montserrat', sans-serif;*/
+
+@font-face {
+   font-family: 'Dillanda Caligraphy Script Font';
+   src: url(../fonts/dillanda.ttf);
+   font-weight: normal;
+   font-style: normal;}

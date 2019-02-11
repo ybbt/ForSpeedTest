@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Ocolus Homepage Decor
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		link(rel="stylesheet" type="text/css" href="dev/general/slick-1.8.1/slick/slick.css")
+		link(rel="stylesheet" type="text/css" href="dev/general/slick-1.8.1/slick/slick-theme.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css")
+		link(rel="stylesheet" href="build/style.css")
+		link(rel="stylesheet" href="dev/general/Normalize.css")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous")
+		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
+	body
+		div.container_page2
+			include 2.html
+			div.home
+				h2.home_title.page2_title The Home Of Scandinavian Design
+				div.page2_line
+				p.home_subtitle.page2_subtitle We help people find the perfect product at the right price. Our extensive selection and superior customer service<br> coupled with the convenience of online shopping, make it easier than ever before to find exactly what you want<br> for your home at a price you can afford.
+				div.home_divbutton
+					button.home_button read more our story ->
+				include ../../bem/page3_block/page3_block.pug
+				+homepage_home(dataMixin_homepage_home)
+			div.home_line
+			div.recommended
+				h2.recommended_title.page2_title Recommended For You
+				div.recommended_line.page2_line
+				div.slick-slider
+					include ../../bem/page3_block/page3_block.pug
+					+homepage_rec(dataMixin_homepage_rec)
+			div.customer
+				h2.customer_title.page2_title Customer Success Stories
+				div.customer_line.page2_line
+				p.customer_subtitle.page2_subtitle There are many variations of passages of Lorem Ipsum available, but the majority have suffered <br>alteration in some form, by injected humour, or randomised words
+				div.customer_block
+					div.block_item
+						p.item_text "Amazing theme and top class support, as I'm a <br> eginner Luke helped me above and beyond <br>and was more than patient"
+						a: img.item_photo(src='img/author1.png')
+						div.item_author Arthur Hansen
+						div.item_profession CEO / Letters Inc
+					div.block_item
+						p.item_text "Let me say something. You have an amazing theme and amazing/awesome support. They helped me on weekend. "
+						a: img.item_photo(src='img/author2.png')
+						div.item_author Annie Quinn
+						div.item_profession Co-Founder / April Inc
+					div.block_item
+						p.item_text "Hi, I just wanted to say thanks for the great theme. I’m finding new ways to improve it every day and find that it’s been the most "
+						a: img.item_photo(src='img/author3.png')
+						div.item_author Chester Torres
+						div.item_profession VP of Product / Local Inc
+				div.customer_slider
+					div.customer_slider__circle
+					div.customer_slider__line
+					div.customer_slider__circle
+			div.instagram
+				h2.instagram_title.page2_title Follow us on Instagram
+				div.instagram_line.page2_line 
+				div.instagram_block
+					a(href='#').instagram_block-photo
+						img(src='img/02followUs1.jpg') 
+						i.fab.fa-instagram
+					a(href='#').instagram_block-photo
+						img(src='img/02followUs2.jpg') 
+					a(href='#').instagram_block-photo
+						img(src='img/02followUs3.jpg') 
+					a(href='#').instagram_block-photo
+						img(src='img/02followUs4.jpg') 
+					a(href='#').instagram_block-photo
+						img(src='img/02followUs5.jpg') 
+					a(href='#').instagram_block-photo
+						img(src='img/02followUs6.jpg')
+			div.page2_footer
+				div.footer_leftright
+					div.footer_left
+						img.logo(src='img/img_service/logo2.png')
+						p.footer_left-text Ocolus- the ultimate WordPress E-commerce toolkit that helps you sell anything.<br>The best choice for your next personal or client's e-shop.
+						div.footer_left-title stay in touch
+						form.footer_left-form
+							label.form_label
+								input.form_input(type="text" name="email" id="email" placeholder = 'Enter your email address' )
+							button.icon_send
+								i.fas.fa-paper-plane
+					div.footer_right
+						div.footer_right-menu
+							div.footer_right-title about us
+							div.footer_right-item
+								div > About Ocolus Decor
+								div > Sitemap
+								div > Trade Assurance
+								div > Bussiness Identity
+								div > Track Your Order
+								div > Secure Payment
+								div > Inspection Service
+						div.footer_right-menu
+							div.footer_right-title customer care
+							div.footer_right-item
+								div > Help Center
+								div > Payment
+								div > How to Buy
+								div > Shipping & Delivery
+								div > International Product Policy
+								div > How to Return
+				div.footer_line
+				div.footer_bottom
+					div.footer_bottom-text © 2018 Ocolus. All Rights Reserved
+					div.footer_bottom-icon
+						i.fab.fa-facebook-f
+						i.fab.fa-twitter
+						i.fab.fa-google
+						i.fab.fa-pinterest-p
+						i.fab.fa-linkedin-in
+		
+		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous")
+		<!-- script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
+		script(type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js") -->
+		script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js")
+		script(src="dev/general/slick-1.8.1/slick/slick.min.js")
+		script(src="build/script.js")
+		

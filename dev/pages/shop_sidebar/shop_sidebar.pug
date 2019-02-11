@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Shop Sidebar
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
+		//- <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+		//- <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css")
+		link(rel="stylesheet" href="build/style.css")
+		link(rel="stylesheet" href="dev/general/Normalize.css")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous")
+	body
+		div.container_page3
+			include ../../bem/alter_header/alter_header.pug
+			main.page3_main
+			section.section1
+				h2.section1_title Fullwidth Sidebar 3 Column
+				div.section1_subtitle
+					a(href) home
+					div /
+					a(href) shop
+			div.row
+				div.col-sm-3
+					section.section2
+						div.product_categories
+							h3.section2_title product categories
+							mixin item(name, sum)
+								li
+									a(href="#").section2_subtitle=name
+									span.section2_sum=sum
+							ul
+								+item('Accessories','(26)')
+								+item('Bags','(24)')
+								+item('Jewellery','(13)')
+								+item('Man', '(19)')
+								+item('Other', '(20)')
+								+item('Shoes', '(10)')
+						div.filter_price
+							h3.section2_title filter by price
+							input.js-range-slider(type="text" name="my_range" value="")
+							div.price
+								span.section2_subtitle Price:
+								span.price_from 
+								span.price_del -
+								span.price_to 
+								button.button.button__filter-price filter
+						div.filter_color
+							h3.section2_title filter by color
+							mixin item(color, name, sum)
+								li
+									a(href="#").section2_color(style = "background: " + color)
+									a(href="#").section2_subtitle=name
+									span.section2_sum=sum
+							ul
+								+item('#27BC9C','Turquoise','(26)')
+								+item('#36CC73','Emerald','(24)')
+								+item('#F0C32C','Sun Flower','(13)')
+								+item('#E47D2E','Carrot', '(19)') 
+								+item('#2E80B7','Belize Hole', '(20)')
+								+item('#E54A41','Alizarin', '(10)')
+						div.filter_size
+							h3.section2_title filter by size
+							mixin item(checkbox, active, name, sum)
+								li
+									label.section2_label
+										input.section2_checkbox(type = "radio" name="contact1" checked=checkbox style = "background-color: " + color) 
+										span.section2_subtitle(class=active)=name
+										span.section2_sum=sum
+							ul
+								+item(true,'active','S','(26)')
+								+item(false,'','M','(24)')
+								+item(false,'','XL','(13)')
+								+item(false,'','XXL', '(19)')
+						div.vendor
+							h3.section2_title vendor
+							mixin item(checkbox, active, name, sum)
+								li
+									label.section2_label
+										input.section2_checkbox(type = "radio" name="contact2" checked=checkbox style = "background-color: " + color) 
+										span.section2_subtitle(class=active)=name
+										span.section2_sum=sum
+							ul
+								+item(true,'active','Guess','(26)')
+								+item(false,'' ,'Lacoste','(24)')
+								+item(false,'','Levi"s','(13)')
+								+item(false,'','Polo', '(19)')
+								+item(false,'','Zara', '(19)')
+						div.top_products
+							h3.section2_title top rated products
+							mixin item(name, type, price)
+								div.section2_top
+									a.block1
+									a.block2
+										div.block2_name=name
+										div.block2_type= type
+										div.block2_price= price
+						
+							+item('Slim-fit cotton','shirt','$380.00')
+							+item('Slim-fit linen','shirt','$25.00')
+							+item('Embrodered','long dress','$605.00')
+						div.tags
+							h3.section2_title tags
+							mixin item(name)
+								button.button_tags=name
+							ul
+								+item('Bath & Body')
+								+item('Beauty')
+								+item('Body Dry')
+								+item('Nature Oil')
+								+item('Organic Makeup')
+				div.col-sm-9
+					section.section3
+						h2.section3_title Shop
+						div.section3_subtitle
+							div.text
+								span.text_found 13 Products Found
+								select.text_sort Sort: Best Selling
+									option Best Selling
+									option Prive Low To High
+									option Prive High To Low
+									option Most Popular
+							div.burger
+								a.burger_grid
+									i.fas.fa-th-large
+								a.burger_list
+									i.fas.fa-bars
+						include ../../bem/page3_block/page3_block.pug
+						+itemGrid(dataMixin)
+			include ../../bem/page3_footer/page3_footer.pug
+		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous")
+		// script(type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js")
+		// script(type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+		// script(src="slick/slick/slick.min.js")
+		script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js")
+		script(src="build/script.js")
+

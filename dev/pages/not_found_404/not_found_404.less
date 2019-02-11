@@ -1,0 +1,52 @@
+
+html{
+	height: 100%;
+}
+body{
+background: grey url(../../../img/08notFound.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0;
+}
+.found{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color:  #ffffff;
+	justify-content: center;
+	margin:320px auto;
+	&_title{
+	font:400 100px/1 'Dillanda Caligraphy Script Font';
+	margin:0;
+	}
+	&_text{
+	font:300 18px/30px 'Poppins', sans-serif;
+	text-align: center;
+	margin:30px 0 50px ;
+	}
+}
+.form{
+	display: flex;
+	width: 520px;
+	background: white;
+	border-radius: 30px;
+	&_input{
+		font:300 16px/30px 'Poppins', sans-serif;
+		color:  #7b7b7b;
+		border-radius: 30px;
+		padding: 10px 20px;
+		border:0;
+		width: 460px;
+		outline: none;
+	}
+	&_button{
+		background: url(../../../img/img_service/tg_button.svg) 50% no-repeat;
+		padding: 10px;
+		border:0;
+		outline: none;
+		color:#76AC2F;
+		&:hover{
+			transform: scale(1.2,1.2);
+		}
+	}
+}

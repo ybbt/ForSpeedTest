@@ -1,0 +1,92 @@
+
+<!--include bem/header-p-cont/header-p-cont.pug-->
+<!--include bem/main-p-cont/main-p-cont.pug-->
+<!--include bem/footer-p-cont/footer-p-cont.pug--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="icon" type="image/png" href="img/img_service/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="dev/general/normalize.css">
+    <link rel="stylesheet" href="dev/pages/contact/Contact.css">
+    <link rel="stylesheet" href="dev/general/libs/bootstrap-grid.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=loadMap" async defer></script>
+  </head>
+  <body>
+    <header class="header-p-cont">
+      <div class="header-p-cont_logo"> <img src="img/img_service/logo.png" alt=""></div>
+      <div class="header-p-cont_menu">
+        <div class="header-p-cont_right">
+          <div class="header-p-cont_menu-item">
+            <div class="header-p-cont_sale">1</div><img class="header-p-cont_menu-item-cart" src="img/img_service/p_cont_Cart.svg" alt="">
+          </div>
+          <div class="header-p-cont_menu-item"><img class="header-p-cont_menu-item-cart" src="img/img_service/p_cont_User.svg" alt=""></div>
+          <div class="header-p-cont_menu-item"><img class="header-p-cont_menu-item-cart" src="img/img_service/p_cont_Search.svg" alt=""></div>
+        </div>
+        <div class="header-p-cont_bar"><img class="header-p-cont_burger-line" src="img/img_service/p_cont_Line-1.svg" alt=""><img class="header-p-cont_burger-line" src="img/img_service/p_cont_Line-2.svg" alt=""><img class="header-p-cont_burger-line" src="img/img_service/p_cont_Line-3.svg" alt=""></div>
+      </div>
+    </header>
+    <main class="main-p-cont">
+      <div class="main-p-cont_map _map"></div>
+      <section class="main-p-cont_contacts">
+        <h3 class="main-p-cont_title">contact</h3>
+        <h1 class="main-p-cont_subtitle">keep in touch with us</h1>
+        <div class="main-p-cont_btstrp-container container">
+          <div class="main-p-cont_btstrp-row row">
+            <div class="contact-p-cont col-4"> 
+              <h1 class="contact-p-cont_title">international</h1>
+              <div class="contact-p-cont_data-contact">98 West 21th Street, Suite 721</div>
+              <div class="contact-p-cont_data-contact">New York NY 10010</div>
+              <div class="contact-p-cont_data-contact contact-p-cont_data-contact__indent-top">Email: info@octopus.com</div>
+              <div class="contact-p-cont_data-contact">Phone: +88 (0) 101 0000 000</div>
+            </div>
+            <div class="contact-p-cont col-4"> 
+              <h1 class="contact-p-cont_title">Customer Service</h1>
+              <div class="contact-p-cont_data-contact">Pier 28 Annex The Embarcadero</div>
+              <div class="contact-p-cont_data-contact">San Francisco, CA 94105</div>
+              <div class="contact-p-cont_data-contact contact-p-cont_data-contact__indent-top">Email: info@octopus.com</div>
+              <div class="contact-p-cont_data-contact">Phone: +88 (0) 101 0000 000</div>
+            </div>
+            <div class="contact-p-cont col-4"> 
+              <h1 class="contact-p-cont_title">PRESS</h1>
+              <div class="contact-p-cont_data-contact">3480 Industrial Blvd, Suite 100, </div>
+              <div class="contact-p-cont_data-contact">West Sacramento, CA 95691</div>
+              <div class="contact-p-cont_data-contact contact-p-cont_data-contact__indent-top">Email: info@octopus.com</div>
+              <div class="contact-p-cont_data-contact">Phone: +88 (0) 101 0000 000</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <form class="main-p-cont_from"> 
+        <div class="main-p-cont_btstrp-container container">
+          <div class="main-p-cont_btstrp-row row">
+            <div class="entry-field-p-cont col-4">
+              <input class="entry-field-p-cont_input" type="text" placeholder="your name"/>
+            </div>
+            <div class="entry-field-p-cont col-4">
+              <input class="entry-field-p-cont_input" type="text" placeholder="your email"/>
+            </div>
+            <div class="entry-field-p-cont col-4">
+              <input class="entry-field-p-cont_input" type="text" placeholder="your phone"/>
+            </div>
+          </div>
+          <div class="main-p-cont_btstrp-row row">
+            <div class="entry-field-p-cont col-12">
+              <input class="entry-field-p-cont_input" type="text" placeholder="your message"/>
+            </div>
+          </div>
+        </div>
+        <div class="main-p-cont_button">
+          <button class="button button__p-cont-submit" type="submit">submit now</button>
+        </div>
+      </form>
+    </main>
+    <footer class="footer-p-cont"> 
+      <div class="footer-p-cont_social"><a class="footer-p-cont_social-item" href="#">facebook</a><a class="footer-p-cont_social-item" href="#">google</a><a class="footer-p-cont_social-item" href="#">instagramm</a></div>
+      <div class="footer-p-cont_menu"><a class="footer-p-cont_menu-item" href="#">policy</a><a class="footer-p-cont_menu-item" href="#">faq</a><a class="footer-p-cont_menu-item" href="#">terms</a><a class="footer-p-cont_menu-item" href="#">support</a></div>
+      <div class="footer-p-cont_allrights">© 2018 Ocolus. All Rights Reserved</div>
+    </footer>
+    <script src="dev/pages/contact/Contact.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+doctype html
+html(lang='en')
+	head
+		title Ocolus Product on Sale
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" )
+		link(rel="stylesheet", href="dev/pages/product_sale/product_sale.css")
+		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
+		link(rel="stylesheet", href="dev/general/fonts/fonts.css")
+		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.6.3/css/all.css', integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/', crossorigin='anonymous')
+		
+		//- link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+
+		
+	body
+		include ../../bem/alter_header/alter_header.pug
+
+		.navigation
+			a.navigation_link(href="#")
+				span.navigation_link_item Home
+			a.navigation_link(href="#")
+				span.navigation_link_item Clothing
+			a.navigation_link(href="#")
+				span.navigation_link_item Men
+			a.navigation_link(href="#")
+				span.navigation_link_item Colorful Palm Angels Haze
+		.product
+			div.prev-img
+				a(href="#")
+					img(src='img/04Slim-fit cotton shirt.jpg')
+				div.prev-text
+					span.prev-text_item Slim fit-cotton shirt<br>
+					span.prev-text_price $ 380.00
+			div.center-img.layout_product
+				.product_sl
+					.tooltip.tooltip__page4-sale sale
+					.tooltip.tooltip__page4-new new
+					.slider-button
+						button._show_popup.slider-button_zoom(data-popup='#popup')
+							img(src="img/img_service/Fullscreen.png", alt="")
+						button(type="button").slider-button_like._like
+							img(src="img/img_service/Heart.png", alt="" onclick="this.src = 'img/img_service/Heart-red.png'")
+						button(type="button").slider-button_comp
+							img(src="img/img_service/Compare.png", alt="")
+					.slider
+						.slider_slide
+							img.slider_img(src='img/sl1.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl2.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl3.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl4.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl5.jpg', alt='img')
+						.slider_slide
+							img.slider_img(src='img/sl6.jpg', alt='img')
+					.slider2
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm1.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm2.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm3.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm4.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm5.jpg', alt='img')
+							.slider2_slide
+								img.slider2_slide_img(src='img/slm6.jpg', alt='img')
+				.choice
+					h2.choice_title Colorful Palm Angels Haze
+					.choice_rating
+					.choice_price 
+						span.choice_price__new $605.00 
+						span.choice_price__old $705.00
+					.choice_text Octopus - most powerful WordPress theme for your tore online. The best choice for your next personal or multi-vendor marketplace.
+					.timer
+						h1.timer_title
+							<i class="far fa-clock"></i> Expires In
+						.timer_div
+							.timer_clock._timer
+							.timer_text
+								span.timer_text-item Days
+								span.timer_text-item Hours
+								span.timer_text-item Mins
+								span.timer_text-item Secs
+					form
+						.color
+							input#yellow.color_input(type='radio', name='color', value='red')
+							label.color_label.color_label__yellow(for='yellow')
+							input#grey.color_input(type='radio', name='color')
+							label.color_label.color_label__grey(for='grey')
+							input#green.color_input(type='radio', name='color')
+							label.color_label.color_label__green(for='green')
+							input#pink.color_input(type='radio', name='color')
+							label.color_label.color_label__pink(for='pink')
+						.size
+							h5.size_title Size
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span S
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span M
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span L
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span XL
+							label.size_label
+								input.size_check(type='radio', name='size')
+								span.size_check__span XXL
+						.buttons
+							.amount
+								span.amount_down._minus <
+								input.amount_input(type='text', value='01')
+								span.amount_up._plus >
+							button.button.button__product(type="button") Add to cart
+						button.button.button__buy(type="submit") buy now
+						.about
+							.about_prop
+								span SKU:
+								span Availability:
+								span Categories: 
+								span Tags:
+								span Share on:
+							.about_val
+								span HJ23456789
+								span In Stock
+								span Men, Fashion, New Trend 
+								span Octopus, Vintage, Awesome, Summer, Beachwear
+								.social
+									a.social_link(href="#")
+										i.fab.fa-facebook-f
+									a.social_link(href="#")
+										i.fab.fa-twitter
+									a.social_link(href="#")
+										i.fab.fa-google
+									a.social_link(href="#")
+										i.fab.fa-pinterest-p
+									a.social_link(href="#")
+										i.fab.fa-linkedin-in
+									a.social_link(href="#")
+
+			div.prev-img
+				div.prev-text
+					span.prev-text_item Classics Automatic<br>
+					span.prev-text_price $ 19.99
+				a(href="#")
+					img(src='img/04small.jpg')
+		.tabs
+			ul.tabs_caption
+				li.tabs_title.active Description 
+				li.tabs_title Additional information
+				li.tabs_title  Reviews
+			.tabs_content.active
+				p.tabs_text
+					| Single-breasted jacket woven in a marled wool weave with narrow notch lapels, a decorative buttonhole and imitation suede elbow patches. Chest pocket, flap front pockets, two buttons at the front and decorative buttons at the cuffs. Partly lined. Slim fit that tapers at the chest and waist, which combined with slightly narrower sleeves creates a fitted silhouette.
+				p.tabs_text
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+			.tabs_content
+				p.tabs_text
+					| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis cumque nihil ex velit quas cupiditate fugiat aliquid impedit? Exercitationem, eum.
+				p.tabs_text
+					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ad sunt animi. Earum incidunt quidem molestiae voluptatum rerum voluptates, maxime cupiditate eius minima iure excepturi laudantium quis consectetur reiciendis eum ex cum eligendi tenetur facere impedit quaerat quibusdam asperiores non odit? Impedit voluptas ex adipisci dolorem sit, hic architecto unde?
+			.tabs_content
+				p.tabs_text
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, magni sequi aut quasi vitae molestias doloremque in. Tenetur obcaecati, aliquid facere eligendi quod quo consequuntur aspernatur ratione sed amet cupiditate vel dolorum voluptatem unde porro nisi iste? Quibusdam, aliquid possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt porro et qui obcaecati possimus eius. Deserunt illum sequi tempora, est nihil, voluptatem quasi debitis eveniet enim officia similique quo autem!
+		.favourite.layout_product
+			h3.favourite_title Selected Favourites
+			include ../../bem/page3_block/page3_block.pug
+			+homepage_rec(dataMixin_product)
+		.bought.layout_product
+			h3.bought_title Others Also Bought
+			include ../../bem/page3_block/page3_block.pug
+			+homepage_rec(dataMixin_bought)
+
+		include ../../bem/page3_footer/page3_footer.pug
+		#popup.popup
+			.inner
+
+				button.button.button__close._btn_close Close
+
+
+
+			script( src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+			script(src="https://rawgithub.com/wbotelhos/raty/master/lib/jquery.raty.js")
+			script( src="dev/general/libs/slick/slick.js")
+			script( src="dev/general/libs/jquery.countdown.js")
+			script( src="dev/pages/product_sale/product_sale.js")
+
+

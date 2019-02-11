@@ -1,0 +1,24 @@
+include ../../bem/page3_block/page3_block.pug
+
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title Contact
+		link(rel="icon" type="image/png" href="img/img_service/favicon.ico" sizes="16x16")
+			
+		//- исправить для галпа
+		link(rel= "stylesheet" href="dev/general/normalize.css")
+		link(rel= "stylesheet" href="dev/pages/search_results/search_results.css")
+
+		link(rel= "stylesheet" href="dev/general/libs/bootstrap-grid.css")
+	body
+		include ../../bem/alter_header/alter_header.pug
+		main.main-p-search
+			form.main-p-search_form-search
+				input.main-p-search_input-search(placeholder="I’m searching for...")
+				button.main-p-search_button-search
+					img(src="img/img_service/p-search-Search.svg", alt="")
+			div.main-p-search_result
+				h1.main-p-search_title 4 result found with "Octopus"
+				+homepage_rec(dataMixin_searchResult)

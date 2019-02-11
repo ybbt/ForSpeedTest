@@ -1,0 +1,113 @@
+//include bem/header-p-cont/header-p-cont.pug
+//include bem/main-p-cont/main-p-cont.pug
+//include bem/footer-p-cont/footer-p-cont.pug
+
+-
+	var _dataContact = [
+		{
+			title: "international",
+			contacts: {
+						address: "98 West 21th Street, Suite 721", 
+						city: "New York NY 10010", 
+						email: "Email: info@octopus.com", 
+						phone: "Phone: +88 (0) 101 0000 000",
+					}
+		},
+		{
+			title: "Customer Service",
+			contacts: {
+						address: "Pier 28 Annex The Embarcadero",
+						 city: "San Francisco, CA 94105", 
+						 email: "Email: info@octopus.com", 
+						 phone: "Phone: +88 (0) 101 0000 000",
+					}
+		},
+		{
+			title: "PRESS",
+			contacts: {
+						address: "3480 Industrial Blvd, Suite 100, ", 
+						city: "West Sacramento, CA 95691", 
+						email: "Email: info@octopus.com", 
+						phone: "Phone: +88 (0) 101 0000 000",
+					}
+		},
+	]
+
+
+
+mixin contact(contacts)
+	each dataContact in contacts
+		div(class="contact-p-cont" class="col-4") 
+			h1(class="contact-p-cont"+"_title")= dataContact.title
+			div(class="contact-p-cont"+"_data-contact")= dataContact.contacts.address
+			div(class="contact-p-cont"+"_data-contact")= dataContact.contacts.city
+			div(class="contact-p-cont"+"_data-contact" class="contact-p-cont"+"_data-contact__indent-top")= dataContact.contacts.email
+			div(class="contact-p-cont"+"_data-contact")= dataContact.contacts.phone
+
+mixin entryField(labelText, quantityCol)
+	div(class="entry-field-p-cont col-" + quantityCol)
+		input(type='text' placeholder=labelText).entry-field-p-cont_input
+
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title Contact
+		link(rel="icon" type="image/png" href="img/img_service/favicon.ico" sizes="16x16")
+			
+		//- исправить для галпа
+		link(rel= "stylesheet" href="dev/general/normalize.css")
+		link(rel= "stylesheet" href="dev/pages/contact/Contact.css")
+
+		link(rel= "stylesheet" href="dev/general/libs/bootstrap-grid.css")
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+
+		script(src="https://maps.googleapis.com/maps/api/js?callback=loadMap" async defer)
+	body
+		header(class="header-p-cont")
+			div(class="header-p-cont"+"_logo") 
+				img(src="img/img_service/logo.png", alt="")
+			div(class="header-p-cont"+"_menu")
+				div(class="header-p-cont"+"_right")
+					div(class="header-p-cont"+"_menu-item")
+						.header-p-cont_sale 1
+						img(src="img/img_service/p_cont_Cart.svg", alt="", class="header-p-cont"+"_menu-item-cart")
+					div(class="header-p-cont"+"_menu-item")
+						img(src="img/img_service/p_cont_User.svg", alt="", class="header-p-cont"+"_menu-item-cart")
+					div(class="header-p-cont"+"_menu-item")
+						img(src="img/img_service/p_cont_Search.svg", alt="", class="header-p-cont"+"_menu-item-cart")
+				div(class="header-p-cont"+"_bar")
+					img(src="img/img_service/p_cont_Line-1.svg", alt="", class="header-p-cont"+ "_burger-line")
+					img(src="img/img_service/p_cont_Line-2.svg", alt="", class="header-p-cont"+ "_burger-line")
+					img(src="img/img_service/p_cont_Line-3.svg", alt="", class="header-p-cont"+ "_burger-line")
+		main(class="main-p-cont")
+			div(class="main-p-cont"+"_map" class="_map")
+			section(class="main-p-cont"+"_contacts")
+				h3(class="main-p-cont"+"_title") contact
+				h1(class="main-p-cont"+"_subtitle") keep in touch with us
+				div(class="main-p-cont"+"_btstrp-container" class="container")
+					div(class="main-p-cont"+"_btstrp-row" class="row")
+						+contact(_dataContact)
+			form(class="main-p-cont"+"_from") 
+				div(class="main-p-cont"+"_btstrp-container" class="container")
+					div(class="main-p-cont"+"_btstrp-row" class="row")
+						+entryField('your name', 4)
+						+entryField('your email', 4)
+						+entryField('your phone', 4)
+					div(class="main-p-cont"+"_btstrp-row" class="row")
+						+entryField('your message', 12)
+				.main-p-cont_button
+					button.button(class='button__p-cont-submit', type='submit') submit now
+		footer(class="footer-p-cont") 
+			div(class="footer-p-cont" + "_social")
+				a(href="#", class="footer-p-cont" + "_social-item") facebook
+				a(href="#", class="footer-p-cont" + "_social-item") google
+				a(href="#", class="footer-p-cont" + "_social-item") instagramm
+			div(class="footer-p-cont" + "_menu")
+				a(href="#", class="footer-p-cont" + "_menu-item") policy
+				a(href="#", class="footer-p-cont" + "_menu-item") faq
+				a(href="#", class="footer-p-cont" + "_menu-item") terms
+				a(href="#", class="footer-p-cont" + "_menu-item") support
+			div(class="footer-p-cont" + "_allrights") © 2018 Ocolus. All Rights Reserved
+		script(src="dev/pages/contact/Contact.js")

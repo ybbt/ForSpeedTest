@@ -1,0 +1,47 @@
+
+-
+	var dataItem = [
+		{
+			title: 'FASHION NEWS',
+			subtitle: 'Helena Bonham Carter Steps Out in This Season’s Ugliest-Chic Shoe',
+			titleinfo: 'Did we think we’d ever see the meme-like pointy-toe sneaker ever go from the runway to the street? It appears as if Helena Bonham Carter has gravitated towards the needly footwear. The actress, who recently was confirmed to star in Netflix’s next season',
+			img: 'img/06FashionNews.jpg',
+		},
+		{
+			title: 'LIFESTYLE',
+			subtitle: 'Bella Hadid Wears ’60s-Style Dior Two Ways in One Night',
+			titleinfo: 'Bella Hadid is quite the fashion chameleon. Yesterday, she channeled a ’90s-era Gwen Stefani in a natty plaid suit from Dior’s Fall 2018 runway, only to throw it back to the ’60s last night in not one but two retro looks',
+			img: 'img/06Lifestyle1.jpg',
+		},
+		{
+			title: 'On our Radar',
+			subtitle: 'Adjaye Associates Unveils Design for National Cathedral',
+			titleinfo: 'Ghanaian president Nana Addo Dankwa Akufo-Addo has unveiled plans for the National Cathedral of Ghana designed by Adjaye Associates. “It is an immense honor to contribute something of this scale and import to my home country,” ',
+			img: 'img/06On our Radar.jpg',
+		},
+		{
+			title: 'FURNITURE',
+			subtitle: 'Masterfully Renovates 1920’s House With Simple Plywood',
+			titleinfo: 'Originally, the center-hall colonial consisted of two stories, plus a mechanicals basement and attic storage. While the views of Rock Creek Park were lovely, there wasn’t enough space for a family of five, two household staff members, two dogs, and two guinea pigs.',
+			img: 'img/06furniture.jpg',
+		},
+		{
+			title: 'LIFESTYLE',
+			subtitle: 'Sun at Six Uses a Traditional Chinese Joinery Technique to Create',
+			titleinfo: 'At this year’s ICFF 2018 show, Brooklyn-based Sun at Six will be debuting Opening, the studio’s first collection of wooden furniture that uses a traditional Chinese joinery technique called sun mao. The collection lacks any type of nails or screws',
+			img: 'img/06Lifestyle2.jpg',
+		},				
+	]
+
+mixin item(_dataItem)
+	.blocksix
+		each obj in dataItem
+			.blocksix
+				img(src=obj.img, alt ='')
+				.blocksix_in
+					.blocksix_infoin
+						h1.blocksix_title= obj.title 
+						h2.blocksix_subtitle= obj.subtitle
+						p.blocksix_titleinfo=obj.titleinfo
+						button.blocksix_boton READ MORE
+							i.fas.fa-arrow-right

@@ -1,0 +1,25 @@
+.tooltip{
+		position:absolute;
+		left: 132px;
+		bottom:10px;
+		height: 20px;
+		width: 37px;
+		background-color:green;
+		font-size: 10px;
+		color:white;
+		display: flex;
+		justify-content: center;
+		align-items: center
+		}
+		.tooltip:before{
+		content: '';
+		position:absolute;
+		left:0px;
+		top:20px;
+		width:0px;
+		height: 0px;
+  		border-width: 0px 0px 7px 6px;
+  		border-style:solid;
+  		border-color:transparent green;
+  		
+  	}

@@ -1,0 +1,77 @@
+.tooltip {
+		position: absolute;
+		height: 20px;
+		width: 37px;
+		font-size: 10px;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 1;
+		&__page4-sale {
+			background-color:#e74c3c;
+			z-index: 1;
+			text-transform: uppercase;
+			top: 10px;
+left:10px;
+		}
+		&__page4-new{
+			background-color:#27ae60;
+			top: 35px;
+			z-index: 1;
+			text-transform: uppercase;
+			left:10px;
+		}
+		&__page6 {
+			background-color:green;
+			left: 115px;
+			bottom:25px;
+		}
+		&__page3 {
+			
+			left: 10px;
+			top: 10px;
+			text-transform: uppercase;
+			// background-color: transparent;
+			display: block;
+			text-align: center;
+			&-sale {
+				background-color:#e74c3c;
+				margin-bottom: 5px;
+			}
+			&-new{
+				background-color:#27ae60;
+				top: 35px;
+			}
+		}
+		&__page6::before{
+		content: '';
+		position:absolute;
+		left:0px;
+		top:20px;
+		width:0px;
+		height: 0px;
+  		border-width: 0px 0px 7px 6px;
+  		border-style:solid;
+  		border-color:transparent green;
+  		}
+
+
+  		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1&__page2  это наш с Лешей модификатор!!!!!!!!!!!!!!!!!!!!!!!!
+  		&__page2 {
+			background: orange;
+  		}
+
+
+
+
+ }
+.tooltip__page6__red{
+	position:absolute;
+	left: 120px;
+	background-color:red;
+	
+	}
+.tooltip__page6__red:before{
+	border-color:transparent red;
+}

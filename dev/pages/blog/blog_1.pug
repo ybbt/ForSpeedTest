@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+	head
+		link(rel="stylesheet", href="dev/bem/alter_header/alter_header__less.css")
+		link(rel="stylesheet", href="dev/pages/blog/blog_1less.css")
+		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.1/css/all.css', integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin='anonymous')
+		meta(charset='UTF-8')
+		link(link rel="shortcut icon" href="img/img_service/favicon.ico" type="image/png")
+		title Block 1
+	body
+		include ../../bem/alter_header/alter_header.pug
+		.title
+			h1.title_titlename Blog 1 Column
+			p.title_subtitle Home / Blog
+		include ../../bem/pugblocksix/pugblocksix.pug
+		+item(dataItem)
+		
+		.slide
+			.slide_side
+				i.fas.fa-caret-left
+			.slide_side 1
+			.slide_side 2
+			.slide_side 3
+			.slide_side
+				i.fas.fa-caret-right
+		section.worldpress
+			.worldpress_h1 Ocolus WordPress Theme
+			p.worldpress_p
+				| A new way to make websites without difficulties
+				br
+				|       The best choice for your next personal or client's e-shop
+				br
+				|       or multi-vendor marketplace project.
+			button.worldpress_button Purchase OcoLus Today!
+		footer.footer-six
+			.footer-six_in
+				.footer-six_side-part
+					h1.footer-six_side-part_h1 Company
+					p.footer-six_side-part_p Shop
+					p.footer-six_side-part_p About
+					p.footer-six_side-part_p Contact
+					p.footer-six_side-part_p Blog
+				.footer-six_middlepart
+					img.logo(src='img/img_service/logo.png', alt='')
+					p.middlepart_p
+						| Ocolus- the ultimate WordPress E-commerce toolkit that helps
+						| you sell anything. The best choice for your next personal.
+						| @2018 Ocolus. All rights reserved.
+				.footer-six_side-part
+					h1.footer-six_side-part_h1 Help
+					p.footer-six_side-part_p Terms
+					p.footer-six_side-part_p Privacy
+					p.footer-six_side-part_p Returns
+					p.footer-six_side-part_p Track Order
